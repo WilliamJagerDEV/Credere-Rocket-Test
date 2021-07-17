@@ -1,0 +1,19 @@
+POST http://localhost:4000/api/move
+Content-Type: application/json
+
+{
+    "movimentos": ["GE", "M", "M", "M", "GD", "M", "M"]
+}
+
+#######################################################
+POST http://localhost:4000/api/move
+Content-Type: application/json
+
+{
+    "movimentos": ["GE", "GE", "M", "M", "M", "M"]
+}
+################################################################################################
+GET  http://localhost:4000/api/reset
+
+################################################################################################
+GET  http://localhost:4000/api/status
