@@ -7,7 +7,7 @@ defmodule SondaMeuCredereWeb.NasaController do
   # macro que retorna true ou false se condição for atendida
   defguard in_field(point) when point in 0..4
 
-  # recebe requiição e envia para processamento e devolve resposta
+  # recebe requiição,envia para processamento e devolve resposta
   def move(conn, %{"movimentos" => movimentos}) when is_list(movimentos) do
     Enum.each(movimentos, fn x -> Sonda.move_to(x) end)
 
@@ -33,7 +33,7 @@ defmodule SondaMeuCredereWeb.NasaController do
     end
   end
 
-  
+
   def reset(conn, _params) do
     conn
     |> put_resp_content_type("application/json")
